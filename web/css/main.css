@@ -1,0 +1,53 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*error text for card Info page*/
+.smallText { 
+    font-size: small;
+}
+
+
+.indent { 
+    margin-left: 6em;
+}
+
+
+.removePadding{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    margin:0;
+    padding:0;
+}
+
+/*------------------------------------------------------------------------------
+                           FOOTER
+------------------------------------------------------------------------------*/
+
+.footerText {
+    color:#46b8da;
+    font-size:.8em;
+    line-height:18px;
+    font-weight:100;
+}
+
+
+
+@media(min-width: 768px){
+    .navbar .navbar-nav{
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    .navbar-collapse{
+        text-align: center;
+    }
+}
