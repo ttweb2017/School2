@@ -12,87 +12,70 @@
             <a href="<c:url value='bus'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course1' /></h4>
+                    <h4><fmt:message key='courseBus' /></h4>
                 </div>
             </a>
             <a href="<c:url value='com'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid;margin-bottom: 3%;">
-                    <h4><fmt:message key='course2' /></h4>
+                    <h4><fmt:message key='courseComp' /></h4>
                 </div>
             </a>
             <a href="<c:url value='deu'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course3' /></h4>
+                    <h4><fmt:message key='courseDeu' /></h4>
                 </div>
             </a>
             <a href="<c:url value='eng'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course4' /></h4>
+                    <h4><fmt:message key='courseEng' /></h4>
                 </div>
             </a>
             <a href="<c:url value='tur'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course5' /></h4>
+                    <h4><fmt:message key='courseTur' /></h4>
                 </div>
             </a>
             <a href="<c:url value='jap'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course6' /></h4>
+                    <h4><fmt:message key='courseJap' /></h4>
                 </div>
             </a>
             <a href="<c:url value='rus'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course7' /></h4>
+                    <h4><fmt:message key='courseRus' /></h4>
                 </div>
             </a>
             <a href="<c:url value='chi'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course8' /></h4>
-                </div>
-            </a>
-            <a href="<c:url value='acc'/>">
-                <div class="col-md-12 img-rounded text-center" 
-                     style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course9' /></h4>
+                    <h4><fmt:message key='courseChi' /></h4>
                 </div>
             </a>
             <a href="<c:url value='other'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course10' /></h4>
+                    <h4><fmt:message key='courseOther' /></h4>
                 </div>
             </a>
             <a href="<c:url value='des'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course11' /></h4>
-                </div>
-            </a>
-            <a href="<c:url value='1c'/>">
-                <div class="col-md-12 img-rounded text-center" 
-                     style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course12' /></h4>
+                    <h4><fmt:message key='courseDes' /></h4>
                 </div>
             </a>
             <a href="<c:url value='qua'/>">
                 <div class="col-md-12 img-rounded text-center" 
                      style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course13' /></h4>
+                    <h4><fmt:message key='courseQua' /></h4>
                 </div>
             </a>
-            <a href="<c:url value='sec'/>">
-                <div class="col-md-12 img-rounded text-center" 
-                     style="border: 0.1em solid; margin-bottom: 3%;">
-                    <h4><fmt:message key='course14' /></h4>
-                </div>
-            </a>
+            
 
             <c:if test="${200 > Integer.valueOf(courseId.toString()) 
                           && 100 < Integer.valueOf(courseId.toString())}">
@@ -111,34 +94,6 @@
             <c:if test="${300 > Integer.valueOf(courseId.toString()) 
                           && 200 < Integer.valueOf(courseId.toString())}">
                   <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseAcc' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo2">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionAcc' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${400 > Integer.valueOf(courseId.toString()) 
-                          && 300 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseSec' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo3">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionSec' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${500 > Integer.valueOf(courseId.toString()) 
-                          && 400 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
                       <h4 class="text-center"><fmt:message key='courseComp' /></h4>
                       <div class="col-md-12">
                           <img src="" alt="photo2">
@@ -146,6 +101,34 @@
 
                       <div class="col-md-12" style="margin-top: 3%;">
                           <p><fmt:message key='courseDescriptionComp' /></p>
+                      </div>
+                  </div>
+            </c:if>
+
+            <c:if test="${400 > Integer.valueOf(courseId.toString()) 
+                          && 300 < Integer.valueOf(courseId.toString())}">
+                  <div class="row">
+                      <h4 class="text-center"><fmt:message key='courseDes' /></h4>
+                      <div class="col-md-12">
+                          <img src="" alt="photo3">
+                      </div>
+
+                      <div class="col-md-12" style="margin-top: 3%;">
+                          <p><fmt:message key='courseDescriptionDes' /></p>
+                      </div>
+                  </div>
+            </c:if>
+
+            <c:if test="${500 > Integer.valueOf(courseId.toString()) 
+                          && 400 < Integer.valueOf(courseId.toString())}">
+                  <div class="row">
+                      <h4 class="text-center"><fmt:message key='courseChi' /></h4>
+                      <div class="col-md-12">
+                          <img src="" alt="photo2">
+                      </div>
+
+                      <div class="col-md-12" style="margin-top: 3%;">
+                          <p><fmt:message key='courseDescriptionChi' /></p>
                       </div>
                   </div>
             </c:if>
@@ -237,34 +220,6 @@
             <c:if test="${1200 > Integer.valueOf(courseId.toString()) 
                           && 1100 < Integer.valueOf(courseId.toString())}">
                   <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseDes' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo2">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionDes' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${1300 > Integer.valueOf(courseId.toString()) 
-                          && 1200 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
-                      <h4 class="text-center"><fmt:message key='course1C' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo2">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescription1C' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${1400 > Integer.valueOf(courseId.toString()) 
-                          && 1300 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
                       <h4 class="text-center"><fmt:message key='courseQua' /></h4>
                       <div class="col-md-12">
                           <img src="" alt="photo2">
@@ -272,20 +227,6 @@
 
                       <div class="col-md-12" style="margin-top: 3%;">
                           <p><fmt:message key='courseDescriptionQua' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${1500 > Integer.valueOf(courseId.toString()) 
-                          && 1400 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
-                      <div class="col-md-2">
-                          <img src="" alt="photo14">
-                      </div>
-
-                      <div class="col-md-10">
-                          <h4 class="text-center"><fmt:message key='courseChiTeacher' /></h4>
-                          <p><fmt:message key='courseDescriptionChiTeacher' /></p>
                       </div>
                   </div>
             </c:if>
@@ -303,17 +244,6 @@
 
                       <div class="col-md-12" style="margin-top: 3%;">
                           <p><fmt:message key='courseDescriptionBus' /></p>
-                          <div style="float: right;">
-                              <a href="<c:url value='likeBus'/>">
-                                  <c:if test="${likeCheck == 0}">
-                                      <i class="fa fa-heart"> ${likeBussines}</i>
-                                  </c:if>
-                                  <c:if test="${likeCheck != 0}">
-                                      <i class="fa fa-heart-o"> ${likeBussines}</i>
-                                  </c:if>
-
-                              </a>
-                          </div>
                       </div>
                   </div>
                   <div class="row" style="margin-top: 4%;">
@@ -354,34 +284,6 @@
             <c:if test="${300 > Integer.valueOf(courseId.toString()) 
                           && 200 < Integer.valueOf(courseId.toString())}">
                   <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseAcc' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo2">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionAcc' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${400 > Integer.valueOf(courseId.toString()) 
-                          && 300 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseSec' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo3">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionSec' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${500 > Integer.valueOf(courseId.toString()) 
-                          && 400 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
                       <h4 class="text-center"><fmt:message key='courseComp' /></h4>
                       <div class="col-md-12">
                           <img src="" alt="photo2">
@@ -389,6 +291,34 @@
 
                       <div class="col-md-12" style="margin-top: 3%;">
                           <p><fmt:message key='courseDescriptionComp' /></p>
+                      </div>
+                  </div>
+            </c:if>
+
+            <c:if test="${400 > Integer.valueOf(courseId.toString()) 
+                          && 300 < Integer.valueOf(courseId.toString())}">
+                  <div class="row">
+                      <h4 class="text-center"><fmt:message key='courseDes' /></h4>
+                      <div class="col-md-12">
+                          <img src="" alt="photo3">
+                      </div>
+
+                      <div class="col-md-12" style="margin-top: 3%;">
+                          <p><fmt:message key='courseDescriptionDes' /></p>
+                      </div>
+                  </div>
+            </c:if>
+
+            <c:if test="${500 > Integer.valueOf(courseId.toString()) 
+                          && 400 < Integer.valueOf(courseId.toString())}">
+                  <div class="row">
+                      <h4 class="text-center"><fmt:message key='courseChi' /></h4>
+                      <div class="col-md-12">
+                          <img src="" alt="photo2">
+                      </div>
+
+                      <div class="col-md-12" style="margin-top: 3%;">
+                          <p><fmt:message key='courseDescriptionChi' /></p>
                       </div>
                   </div>
             </c:if>
@@ -410,57 +340,46 @@
             <c:if test="${700 > Integer.valueOf(courseId.toString()) 
                           && 600 < Integer.valueOf(courseId.toString())}">
                   <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseBus' /></h4>
+                      <h4 class="text-center"><fmt:message key='courseEng' /></h4>
                       <div class="col-md-12">
                           <img src="" alt="photo">
                       </div>
 
                       <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionBus' /></p>
-                          <div style="float: right;">
-                              <a href="<c:url value='likeBus'/>">
-                                  <c:if test="${likeCheck == 0}">
-                                      <i class="fa fa-heart"> ${likeBussines}</i>
-                                  </c:if>
-                                  <c:if test="${likeCheck != 0}">
-                                      <i class="fa fa-heart-o"> ${likeBussines}</i>
-                                  </c:if>
-
-                              </a>
-                          </div>
+                          <p><fmt:message key='courseDescriptionEng' /></p>
                       </div>
                   </div>
                   <div class="row" style="margin-top: 4%;">
                       <h4 class="text-center"><fmt:message key='courseEng' /></h4>
                       <div class="col-md-4 text-center">
                           <img src="" alt="photo">
-                          <h4><fmt:message key='courseBus' /></h4>
-                          <p><fmt:message key='courseBus' /></p>
+                          <h4><fmt:message key='courseEng' /></h4>
+                          <p><fmt:message key='courseEng' /></p>
                       </div>
                       <div class="col-md-4 text-center">
                           <img src="" alt="photo">
-                          <h4><fmt:message key='courseBus' /></h4>
-                          <p><fmt:message key='courseBus' /></p>
+                          <h4><fmt:message key='courseEng' /></h4>
+                          <p><fmt:message key='courseEng' /></p>
                       </div>
                       <div class="col-md-4 text-center">
                           <img src="" alt="photo">
-                          <h4><fmt:message key='courseBus' /></h4>
-                          <p><fmt:message key='courseBus' /></p>
+                          <h4><fmt:message key='courseEng' /></h4>
+                          <p><fmt:message key='courseEng' /></p>
                       </div>
                   </div>
                   <div class="row" style="margin-top: 4%;">
-                      <h3 class="text-center"><fmt:message key='courseBus' /></h3>
+                      <h3 class="text-center"><fmt:message key='courseEng' /></h3>
                       <div class="col-md-12">
-                          <h4><fmt:message key='courseBus' /></h4>
-                          <p><fmt:message key='courseBus' /></p>
+                          <h4><fmt:message key='courseEng' /></h4>
+                          <p><fmt:message key='courseEng' /></p>
                       </div>
                       <div class="col-md-12">
-                          <h4><fmt:message key='courseBus' /></h4>
-                          <p><fmt:message key='courseBus' /></p>
+                          <h4><fmt:message key='courseEng' /></h4>
+                          <p><fmt:message key='courseEng' /></p>
                       </div>
                       <div class="col-md-12">
-                          <h4><fmt:message key='courseBus' /></h4>
-                          <p><fmt:message key='courseBus' /></p>
+                          <h4><fmt:message key='courseEng' /></h4>
+                          <p><fmt:message key='courseEng' /></p>
                       </div>
                   </div>
             </c:if>
@@ -524,34 +443,6 @@
             <c:if test="${1200 > Integer.valueOf(courseId.toString()) 
                           && 1100 < Integer.valueOf(courseId.toString())}">
                   <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseDes' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo2">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionDes' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${1300 > Integer.valueOf(courseId.toString()) 
-                          && 1200 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
-                      <h4 class="text-center"><fmt:message key='course1C' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo2">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescription1C' /></p>
-                      </div>
-                  </div>
-            </c:if>
-
-            <c:if test="${1400 > Integer.valueOf(courseId.toString()) 
-                          && 1300 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
                       <h4 class="text-center"><fmt:message key='courseQua' /></h4>
                       <div class="col-md-12">
                           <img src="" alt="photo2">
@@ -563,23 +454,21 @@
                   </div>
             </c:if>
 
-            <c:if test="${1500 > Integer.valueOf(courseId.toString()) 
-                          && 1400 < Integer.valueOf(courseId.toString())}">
-                  <div class="row">
-                      <h4 class="text-center"><fmt:message key='courseChi' /></h4>
-                      <div class="col-md-12">
-                          <img src="" alt="photo14">
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 3%;">
-                          <p><fmt:message key='courseDescriptionChi' /></p>
-                      </div>
-                  </div>
-            </c:if>
             <div class="row" style="margin-top: 4%;margin-bottom: 4%;">
                 <h4 class="text-center"><fmt:message key='emailTitle' /></h4>
                 <div class="col-md-12">
-                    <form id="register-form" method="post" action="register.php" role="form">
+                    <form id="register-form" method="post" action="sendMail" role="form">
+                        <fieldset class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="fa fa-user-o"></span>
+                                </div>
+                                <input class="form-control" id="name" name="name" 
+                                       placeholder="<fmt:message key='emailName' />" 
+                                       type="text" required/>
+                            </div>
+                        </fieldset>
+
                         <fieldset class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon">
@@ -587,7 +476,7 @@
                                 </div>
                                 <input class="form-control" id="email" name="email" 
                                        placeholder="<fmt:message key='emailEmail' />" 
-                                       type="text" required/>
+                                       type="email" required/>
                             </div>
                         </fieldset>
 

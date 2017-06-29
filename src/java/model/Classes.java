@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.Date;
 import org.jboss.weld.util.LazyValueHolder.Serializable;
 
 /**

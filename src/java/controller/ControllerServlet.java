@@ -6,18 +6,14 @@
 package controller;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import mail.SendMail;
 import model.Classes;
 import model.MapClasses;
 import model.MapClassesRu;
@@ -35,6 +31,7 @@ import records.MyDatas;
             "/news",
             "/contacts",
             "/srch",
+            "/sendMail",
             "/eng",
             "/rus",
             "/deu",
@@ -42,13 +39,10 @@ import records.MyDatas;
             "/jap",
             "/chi",
             "/bus",
-            "/acc",
-            "/sec",
             "/qua",
-            "/1c",
             "/other",
             "/com",
-            "/des", "/likeBus"})
+            "/des"})
 public class ControllerServlet extends HttpServlet {
 
     /**
@@ -64,7 +58,7 @@ public class ControllerServlet extends HttpServlet {
             throws ServletException, IOException {
 
         request.setCharacterEncoding("UTF-8");  // ensures that user input is interpreted as
-        // 8-bit Unicode (e.g., for Czech characters)
+        // 8-bit Unicode (e.g., for Russian characters)
 
         String userPath = request.getServletPath();
         HttpSession session = request.getSession();
@@ -106,13 +100,10 @@ public class ControllerServlet extends HttpServlet {
                 mapRu = new MapClassesRu();
 
                 clt = map.getResultTk();
+                System.err.println("for: "+clt);
                 cl = mapRu.getResultRu();
                 session.setAttribute("mapClass", clt);
                 session.setAttribute("mapClassRu", cl);
-                for (int i = 0; i < clt.size(); i++) {
-                    System.err.println("TKM idler: " + clt.get(i).getId());
-                }
-
                 userPath = "/allCourses";
                 break;
             case "/srch":
@@ -231,7 +222,6 @@ public class ControllerServlet extends HttpServlet {
 
                 userPath = "/allCourses";
                 break;
-
             case "/teachers":
                 userPath = "/teachers";
                 break;
@@ -241,20 +231,6 @@ public class ControllerServlet extends HttpServlet {
             case "/eng":
                 session.setAttribute("counter", ++MyDatas.counter);
                 session.setAttribute("courseId", "601");
-                userPath = "/aboutCourse";
-                break;
-            case "/likeBus":
-                if(MyDatas.likeCounterCheck == 0){
-                    session.setAttribute("likeCheck", MyDatas.likeCounterCheck);
-                    session.setAttribute("likeBussines", ++MyDatas.likeCounter);
-                    MyDatas.likeCounterCheck++;
-                }else{
-                    session.setAttribute("likeCheck", MyDatas.likeCounterCheck);
-                    session.setAttribute("likeBussines", --MyDatas.likeCounter);
-                    MyDatas.likeCounterCheck--;
-                }
-                
-                session.setAttribute("courseId", "101");
                 userPath = "/aboutCourse";
                 break;
             case "/rus":
@@ -274,39 +250,27 @@ public class ControllerServlet extends HttpServlet {
                 userPath = "/aboutCourse";
                 break;
             case "/chi":
-                session.setAttribute("courseId", "1401");
+                session.setAttribute("courseId", "401");
                 userPath = "/aboutCourse";
                 break;
             case "/bus":
                 session.setAttribute("courseId", "101");
                 userPath = "/aboutCourse";
                 break;
-            case "/acc":
+            case "/com":
                 session.setAttribute("courseId", "201");
                 userPath = "/aboutCourse";
                 break;
-            case "/com":
-                session.setAttribute("courseId", "401");
-                userPath = "/aboutCourse";
-                break;
-            case "/sec":
+            case "/des":
                 session.setAttribute("courseId", "301");
                 userPath = "/aboutCourse";
                 break;
-            case "/des":
-                session.setAttribute("courseId", "1101");
-                userPath = "/aboutCourse";
-                break;
             case "/qua":
-                session.setAttribute("courseId", "1301");
+                session.setAttribute("courseId", "1101");
                 userPath = "/aboutCourse";
                 break;
             case "/other":
                 session.setAttribute("courseId", "1001");
-                userPath = "/aboutCourse";
-                break;
-            case "/1c":
-                session.setAttribute("courseId", "1201");
                 userPath = "/aboutCourse";
                 break;
             case "/contacts":
@@ -341,7 +305,7 @@ public class ControllerServlet extends HttpServlet {
             IOException {
 
         request.setCharacterEncoding("UTF-8");  // ensures that user input is interpreted as
-        // 8-bit Unicode (e.g., for Czech characters)
+        // 8-bit Unicode (e.g., for Russian/Turkmen characters)
 
         String userPath = request.getServletPath();
         HttpSession session = request.getSession();
@@ -367,14 +331,22 @@ public class ControllerServlet extends HttpServlet {
 
                 // if updateCart action is called
                 break;
-            // TODO: Implement update cart action
-            // if purchase action is called
-            case "/updateCart":
-                break;
-            case "/purchase":
-                // TODO: Implement purchase action
-
-                userPath = "/confirmation";
+            case "/sendMail":
+                SendMail email = new SendMail();
+                String text = "Ady: " +request.getParameter("name") + "\nPhone: " + 
+                        request.getParameter("phone") + "\n" + request.getParameter("text");
+                
+                if(email.send(request.getParameter("email"), text)){
+                    // if previous view is index or cannot be determined, send user to welcome page
+                    try {
+                        request.getRequestDispatcher("/index.jsp").forward(request, response);
+                    } catch (IOException | ServletException ex) {
+                        ex.printStackTrace();
+                    }
+                    return;
+                }else{
+                    userPath = "/aboutCourse";
+                }
                 break;
             default:
                 break;
@@ -382,7 +354,6 @@ public class ControllerServlet extends HttpServlet {
 
         // use RequestDispatcher to forward request internally
         String url = "/WEB-INF/view" + userPath + ".jsp";
-
         try {
             request.getRequestDispatcher(url).forward(request, response);
         } catch (IOException | ServletException ex) {

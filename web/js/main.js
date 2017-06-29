@@ -8,6 +8,7 @@ function myFunction() {
     var s3 = document.getElementById('school3');
     var s4 = document.getElementById('school4');
     var s5 = document.getElementById('school5');
+    var s6 = document.getElementById('school6');
 
     if (s1.style.display === 'none') {
         s1.style.display = 'block';
@@ -15,13 +16,15 @@ function myFunction() {
         s3.style.display = 'none';
         s4.style.display = 'none';
         s5.style.display = 'none';
+        s6.style.display = 'none';
         
         document.getElementById('languages').className = 'active';
         
-        document.getElementById('accountant').classList.remove('active');
+        document.getElementById('homeBussines').classList.remove('active');
         document.getElementById('computer').classList.remove('active');
         document.getElementById('design').classList.remove('active');
-        document.getElementById('mcOffice').classList.remove('active');
+        document.getElementById('qualification').classList.remove('active');
+        document.getElementById('others').classList.remove('active');
     }
 }
 
@@ -31,6 +34,7 @@ function myFunction2() {
     var s3 = document.getElementById('school3');
     var s4 = document.getElementById('school4');
     var s5 = document.getElementById('school5');
+    var s6 = document.getElementById('school6');
 
     if (s2.style.display === 'none') {
         s2.style.display = 'block';
@@ -38,14 +42,16 @@ function myFunction2() {
         s3.style.display = 'none';
         s4.style.display = 'none';
         s5.style.display = 'none';
+        s6.style.display = 'none';
 
         
-        document.getElementById('accountant').className = 'active';
+        document.getElementById('homeBussines').className = 'active';
         
         document.getElementById('languages').classList.remove('active');
         document.getElementById('computer').classList.remove('active');
         document.getElementById('design').classList.remove('active');
-        document.getElementById('mcOffice').classList.remove('active');
+        document.getElementById('qualification').classList.remove('active');
+        document.getElementById('others').classList.remove('active');
     }
 }
 
@@ -55,6 +61,7 @@ function myFunction3() {
     var s3 = document.getElementById('school3');
     var s4 = document.getElementById('school4');
     var s5 = document.getElementById('school5');
+    var s6 = document.getElementById('school6');
 
     if (s3.style.display === 'none') {
         s3.style.display = 'block';
@@ -62,13 +69,15 @@ function myFunction3() {
         s2.style.display = 'none';
         s4.style.display = 'none';
         s5.style.display = 'none';
+        s6.style.display = 'none';
         
         document.getElementById('computer').className = 'active';
         
         document.getElementById('languages').classList.remove('active');
-        document.getElementById('accountant').classList.remove('active');
+        document.getElementById('homeBussines').classList.remove('active');
         document.getElementById('design').classList.remove('active');
-        document.getElementById('mcOffice').classList.remove('active');
+        document.getElementById('qualification').classList.remove('active');
+        document.getElementById('others').classList.remove('active');
     }
 }
 
@@ -78,6 +87,7 @@ function myFunction4() {
     var s3 = document.getElementById('school3');
     var s4 = document.getElementById('school4');
     var s5 = document.getElementById('school5');
+    var s6 = document.getElementById('school6');
 
     if (s4.style.display === 'none') {
         s4.style.display = 'block';
@@ -85,13 +95,15 @@ function myFunction4() {
         s2.style.display = 'none';
         s3.style.display = 'none';
         s5.style.display = 'none';
+        s6.style.display = 'none';
         
         document.getElementById('design').className = 'active';
         
         document.getElementById('languages').classList.remove('active');
-        document.getElementById('accountant').classList.remove('active');
+        document.getElementById('homeBussines').classList.remove('active');
         document.getElementById('computer').classList.remove('active');
-        document.getElementById('mcOffice').classList.remove('active');
+        document.getElementById('qualification').classList.remove('active');
+        document.getElementById('others').classList.remove('active');
     }
 }
 
@@ -101,6 +113,7 @@ function myFunction5() {
     var s3 = document.getElementById('school3');
     var s4 = document.getElementById('school4');
     var s5 = document.getElementById('school5');
+    var s6 = document.getElementById('school6');
 
     if (s5.style.display === 'none') {
         s5.style.display = 'block';
@@ -108,13 +121,40 @@ function myFunction5() {
         s2.style.display = 'none';
         s4.style.display = 'none';
         s3.style.display = 'none';
+        s6.style.display = 'none';
         
-        document.getElementById('mcOffice').className = 'active';
+        document.getElementById('others').className = 'active';
         
         document.getElementById('languages').classList.remove('active');
-        document.getElementById('accountant').classList.remove('active');
+        document.getElementById('homeBussines').classList.remove('active');
         document.getElementById('computer').classList.remove('active');
+        document.getElementById('qualification').classList.remove('active');
         document.getElementById('design').classList.remove('active');
     }
 }
 
+function myFunction6() {
+    var s1 = document.getElementById('school1');
+    var s2 = document.getElementById('school2');
+    var s3 = document.getElementById('school3');
+    var s4 = document.getElementById('school4');
+    var s5 = document.getElementById('school5');
+    var s6 = document.getElementById('school6');
+
+    if (s6.style.display === 'none') {
+        s6.style.display = 'block';
+        s1.style.display = 'none';
+        s2.style.display = 'none';
+        s3.style.display = 'none';
+        s4.style.display = 'none';
+        s5.style.display = 'none';
+        
+        document.getElementById('qualification').className = 'active';
+        
+        document.getElementById('languages').classList.remove('active');
+        document.getElementById('homeBussines').classList.remove('active');
+        document.getElementById('computer').classList.remove('active');
+        document.getElementById('others').classList.remove('active');
+        document.getElementById('design').classList.remove('active');
+    }
+}

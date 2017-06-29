@@ -11,6 +11,6 @@ package records;
  */
 public class MyDatas {
     public static int counter = 0;
-    public static int likeCounter = 0;
+    public static int likeCounter = 5;
     public static int likeCounterCheck = 0;
 }
