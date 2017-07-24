@@ -30,6 +30,8 @@
         <style>
             body {
                 padding-top: 50px;
+                background-image: url('img/background.png');
+                
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -51,7 +53,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<c:url value='/'/>"><fmt:message key='projectName' /></a>
+                    <a class="navbar-brand" href="<c:url value='/'/>">
+                        <img id="topLogo" class="img-responsive" src="img/gerb.png" alt="logo">
+                    </a><!--<fmt:message key='projectName' />-->
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -131,3 +135,8 @@
             </div><!--/.navbar-collapse -->
         </div>
     </nav>
+    <div class="contactUs-float" >
+        <a class="lgscreen" href="<c:url value='register'/>" ><fmt:message key='registerFormRegisterBtn' /></a>
+
+        <a class="smscreen" href="<c:url value='register'/>" ><i class="fa fa-pencil" data-fa="" aria-hidden="true"></i></a>
+    </div>

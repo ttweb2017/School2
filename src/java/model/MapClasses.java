@@ -19,83 +19,84 @@ public class MapClasses {
     //Creating map of Books    
     Map<Integer, Classes> map = new HashMap<>();
     
+    String week = "Hepde";
     //Bussines  code: 100  
-    Classes class1a = new Classes(101, "bus", "Telekeçilik işjeňligine giriş", "Başlangyç", "12 Week", 220);
-    Classes class1b = new Classes(102, "bus", "Telekeçiligiň esaslary", "Esaslary", "8 Week", 530);
-    Classes class1c = new Classes(103, "bus", "Telekeçilik ulgamynyň menejmenti", "Esaslary", "7 Week", 250);
-    Classes class1d = new Classes(104, "bus", "Buhgalter hasabynyň  we telekeçiligiň esaslary", "Esaslary", "6 Week", 800);
-    Classes class1e = new Classes(105, "bus", "Buhgalter hasabynyň esaslary", "Esaslary", "7 Week", 600);
-    Classes class1f = new Classes(106, "bus", "1S buhgalter hasaby", "Esaslary", "7 Week", 400);
-    Classes class1g = new Classes(107, "bus", "Hasapçy", "Esaslary", "4 Week", 1200);
-    Classes class1h = new Classes(108, "bus", "Biznes meýilnamalaşdyryş", "Esaslary", "4 Week", 160);
-    Classes class1i = new Classes(109, "bus", "Biznes meýilnamalaşdyryş", "Esaslary", "4 Week", 200);
-    Classes class1j = new Classes(110, "bus", "Marketing", "Esaslary", "4 Week", 200);
-    Classes class1k = new Classes(111, "bus", "Ykdysady bilimleriň okuwy", "Esaslary", "4 Week", 700);
-    Classes class1l = new Classes(112, "bus", "Işgär iş dolandyryjylyk", "Esaslary", "4 Week", 500);
-    Classes class1m = new Classes(113, "bus", "Işgär iş dolandyryjylyk we arhiw işi", "Esaslary", "4 Week", 240);
-    Classes class1n = new Classes(114, "bus", "Auditorçylyk işi", "Esaslary", "4 Week", 500);
+    Classes class1a = new Classes(101, "bus", "Telekeçilik işjeňligine giriş", "Başlangyç", "12 Hepde", 220);
+    Classes class1b = new Classes(102, "bus", "Telekeçiligiň esaslary", "Esaslary", "8 Hepde", 530);
+    Classes class1c = new Classes(103, "bus", "Telekeçilik ulgamynyň menejmenti", "Esaslary", "7 Hepde", 250);
+    Classes class1d = new Classes(104, "bus", "Buhgalter hasabynyň  we telekeçiligiň esaslary", "Esaslary", "6 Hepde", 800);
+    Classes class1e = new Classes(105, "bus", "Buhgalter hasabynyň esaslary", "Esaslary", "7 Hepde", 600);
+    Classes class1f = new Classes(106, "bus", "1S buhgalter hasaby", "Esaslary", "7 Hepde", 400);
+    Classes class1g = new Classes(107, "bus", "Hasapçy", "Esaslary", "4 Hepde", 1200);
+    Classes class1h = new Classes(108, "bus", "Biznes meýilnamalaşdyryş", "Esaslary", "4 Hepde", 160);
+    Classes class1i = new Classes(109, "bus", "Biznes meýilnamalaşdyryş", "Esaslary", "4 Hepde", 200);
+    Classes class1j = new Classes(110, "bus", "Marketing", "Esaslary", "4 Hepde", 200);
+    Classes class1k = new Classes(111, "bus", "Ykdysady bilimleriň okuwy", "Esaslary", "4 Hepde", 700);
+    Classes class1l = new Classes(112, "bus", "Işgär iş dolandyryjylyk", "Esaslary", "4 Hepde", 500);
+    Classes class1m = new Classes(113, "bus", "Işgär iş dolandyryjylyk we arhiw işi", "Esaslary", "4 Hepde", 240);
+    Classes class1n = new Classes(114, "bus", "Auditorçylyk işi", "Esaslary", "4 Hepde", 500);
     
     //Computer courses code: 200
-    Classes class2a = new Classes(201, "com", "Kompýuter sowatlylygynyň esaslary", "Esaslary", "4 Week", 600);
-    Classes class2b = new Classes(202, "com", "Kompýuter sowatlylygy – çylşyrymly tapgyr", "Esaslary", "4 Week", 600);
-    Classes class2c = new Classes(203, "com", "3D Max we Auto CAD programmalarynyň esaslary", "Esaslary", "4 Week", 1000);
-    Classes class2d = new Classes(204, "com", "Archi CAD programmasynyň esaslary", "Esaslary", "4 Week", 1000);
+    Classes class2a = new Classes(201, "com", "Kompýuter sowatlylygynyň esaslary", "Esaslary", "4 Hepde", 600);
+    Classes class2b = new Classes(202, "com", "Kompýuter sowatlylygy – çylşyrymly tapgyr", "Esaslary", "4 Hepde", 600);
+    Classes class2c = new Classes(203, "com", "3D Max we Auto CAD programmalarynyň esaslary", "Esaslary", "4 Hepde", 1000);
+    Classes class2d = new Classes(204, "com", "Archi CAD programmasynyň esaslary", "Esaslary", "4 Hepde", 1000);
     
     //Design courses code: 300
-    Classes class3a = new Classes(301, "des", "Interýerleriň bezegi", "Umumy", "4 Week", 600);
-    Classes class3b = new Classes(302, "des", "Landşaft dizaýny", "Umumy", "4 Week", 3000);
-    Classes class3c = new Classes(303, "des", "Floristika", "Umumy", "4 Week", 750);
-    Classes class3d = new Classes(304, "des", "Ýeňil geýimleriň biçimçi-tikinçisi", "Umumy", "4 Week", 600);
-    Classes class3e = new Classes(305, "des", "Bagbançylyk", "Umumy", "4 Week", 300);
+    Classes class3a = new Classes(301, "des", "Interýerleriň bezegi", "Umumy", "4 Hepde", 600);
+    Classes class3b = new Classes(302, "des", "Landşaft dizaýny", "Umumy", "4 Hepde", 3000);
+    Classes class3c = new Classes(303, "des", "Floristika", "Umumy", "4 Hepde", 750);
+    Classes class3d = new Classes(304, "des", "Ýeňil geýimleriň biçimçi-tikinçisi", "Umumy", "4 Hepde", 600);
+    Classes class3e = new Classes(305, "des", "Bagbançylyk", "Umumy", "4 Hepde", 300);
     
     //Languages code: 400-900
-    Classes class4a = new Classes(401, "chi", "Hytaý dili – Başlangyç dereje, Grammatika", "Başlangyç", "7 Week", 1200);
-    Classes class4aa = new Classes(402, "chi", "Işewür hytaý dili", "Başlangyç", "7 Week", 600);
+    Classes class4a = new Classes(401, "chi", "Hytaý dili – Başlangyç dereje, Grammatika", "Başlangyç", "7 Hepde", 1200);
+    Classes class4aa = new Classes(402, "chi", "Işewür hytaý dili", "Başlangyç", "7 Hepde", 600);
     
-    Classes class4b = new Classes(501, "deu", "Nemes dili", "Umumy", "12 Week", 1500);
+    Classes class4b = new Classes(501, "deu", "Nemes dili", "Umumy", "12 Hepde", 1500);
     
-    Classes class4c = new Classes(601, "eng", "Iňlis dili", "Beginer", "8 Week", 500);
-    Classes class4d = new Classes(602, "eng", "Iňlis dili", "Elementary", "8 Week", 500);
-    Classes class4e = new Classes(603, "eng", "Iňlis dili", "Pre-Intermediate", "8 Week", 500);
-    Classes class4f = new Classes(604, "eng", "Iňlis dili", "Intermediate", "8 Week", 500);
-    Classes class4g = new Classes(605, "eng", "Iňlis dili", "Upper-Intermediate", "8 Week", 600);
-    Classes class4h = new Classes(606, "eng", "Iňlis dili", "Advanced", "8 Week", 600);
+    Classes class4c = new Classes(601, "eng", "Iňlis dili", "Beginer", "8 Hepde", 500);
+    Classes class4d = new Classes(602, "eng", "Iňlis dili", "Elementary", "8 Hepde", 500);
+    Classes class4e = new Classes(603, "eng", "Iňlis dili", "Pre-Intermediate", "8 Hepde", 500);
+    Classes class4f = new Classes(604, "eng", "Iňlis dili", "Intermediate", "8 Hepde", 500);
+    Classes class4g = new Classes(605, "eng", "Iňlis dili", "Upper-Intermediate", "8 Hepde", 600);
+    Classes class4h = new Classes(606, "eng", "Iňlis dili", "Advanced", "8 Hepde", 600);
     
-    Classes class4i = new Classes(701, "tur", "Türkmen dili", "Umumy", "7 Week", 500);
+    Classes class4i = new Classes(701, "tur", "Türkmen dili", "Umumy", "7 Hepde", 500);
     
-    Classes class4j = new Classes(801, "jap", "Ýapon dili", "Umumy", "6 Week", 1200);
+    Classes class4j = new Classes(801, "jap", "Ýapon dili", "Umumy", "6 Hepde", 1200);
     
-    Classes class4k = new Classes(901, "rus", "Rus dili", "Umumy", "4 Week", 500);
+    Classes class4k = new Classes(901, "rus", "Rus dili", "Umumy", "4 Hepde", 500);
     
     //other code: 1000
-    Classes class5a = new Classes(1001, "other", "Ofisiant hünärine giriş", "Esaslary", "12 Week", 285);
-    Classes class5b = new Classes(1002, "other", "Ofisiant hünärine giriş", "Esaslary", "12 Week", 600);
-    Classes class5c = new Classes(1003, "other", "Myhmanhana hojalygynyň serenjamçysy", "Esaslary", "8 Week", 285);
-    Classes class5d = new Classes(1004, "other", "Myhmanhana hojalygynyň serenjamçysy", "Esaslary", "8 Week", 600);
-    Classes class5e = new Classes(1005, "other", "Şowly satyjy we merçendaýzingiň standartlary", "Esaslary", "7 Week", 220);
-    Classes class5f = new Classes(1006, "other", "Aşpez-konditer", "Esaslary", "8 Week", 3000);
-    Classes class5g = new Classes(1007, "other", "Aşpez", "Esaslary", "8 Week", 3000);
-    Classes class5h = new Classes(1008, "other", "Çörekçi", "Esaslary", "8 Week", 3000);
-    Classes class5i = new Classes(1009, "other", "Myhmanhana administratory", "Esaslary", "8 Week", 600);
-    Classes class5j = new Classes(1010, "other", "Sport türgenleşik enjamlarynyň ugrukdyryjysy", "Esaslary", "8 Week", 600);
-    Classes class5k = new Classes(1011, "other", "Gid-terjimeçi", "Esaslary", "8 Week", 600);
-    Classes class5l = new Classes(1012, "other", "Sözleýiş medeniýeti", "Esaslary", "8 Week", 180);
-    Classes class5m = new Classes(1013, "other", "Kätip-referent", "Esaslary", "8 Week", 500);
-    Classes class5n = new Classes(1014, "other", "Umumy gurluşyk işleriniň ussasy: kerpiç örüji, armaturçy, galypçy, betonçy", "Esaslary", "6 Week", 800);
+    Classes class5a = new Classes(1001, "other", "Ofisiant hünärine giriş", "Esaslary", "12 Hepde", 285);
+    Classes class5b = new Classes(1002, "other", "Ofisiant hünärine giriş", "Esaslary", "12 Hepde", 600);
+    Classes class5c = new Classes(1003, "other", "Myhmanhana hojalygynyň serenjamçysy", "Esaslary", "8 Hepde", 285);
+    Classes class5d = new Classes(1004, "other", "Myhmanhana hojalygynyň serenjamçysy", "Esaslary", "8 Hepde", 600);
+    Classes class5e = new Classes(1005, "other", "Şowly satyjy we merçendaýzingiň standartlary", "Esaslary", "7 Hepde", 220);
+    Classes class5f = new Classes(1006, "other", "Aşpez-konditer", "Esaslary", "8 Hepde", 3000);
+    Classes class5g = new Classes(1007, "other", "Aşpez", "Esaslary", "8 Hepde", 3000);
+    Classes class5h = new Classes(1008, "other", "Çörekçi", "Esaslary", "8 Hepde", 3000);
+    Classes class5i = new Classes(1009, "other", "Myhmanhana administratory", "Esaslary", "8 Hepde", 600);
+    Classes class5j = new Classes(1010, "other", "Sport türgenleşik enjamlarynyň ugrukdyryjysy", "Esaslary", "8 Hepde", 600);
+    Classes class5k = new Classes(1011, "other", "Gid-terjimeçi", "Esaslary", "8 Hepde", 600);
+    Classes class5l = new Classes(1012, "other", "Sözleýiş medeniýeti", "Esaslary", "8 Hepde", 180);
+    Classes class5m = new Classes(1013, "other", "Kätip-referent", "Esaslary", "8 Hepde", 500);
+    Classes class5n = new Classes(1014, "other", "Umumy gurluşyk işleriniň ussasy: kerpiç örüji, armaturçy, galypçy, betonçy", "Esaslary", "6 Hepde", 800);
     
     //qualification
     Classes class6a = new Classes(1101, "qua", "Maliýe hasabatlylygynyň seljermesi", "Esaslary", "4 Week", 100);
-    Classes class6b = new Classes(1102, "qua", "Maliýe hasabatlylygynyň halkara standartlary - Maliýe hasabaty-1", "Esaslary", "4 Week", 700);
-    Classes class6c = new Classes(1103, "qua", "Maliýe hasabatlylygynyň halkara standartlary - Dolandyryş hasaby-1", "Esaslary", "4 Week", 700);
-    Classes class6d = new Classes(1104, "qua", "Salgytlar we hukuk", "Esaslary", "4 Week", 700);
-    Classes class6e = new Classes(1105, "qua", "Maliýe hasabatlylygynyň halkara we milli standartlarynyň utgaşmasy", "Esaslary", "4 Week", 600);
-    Classes class6f = new Classes(1106, "qua", "Maliýe hasabatlylygynyň halkara we milli standartlarynyň utgaşmasy", "Esaslary", "4 Week", 800);
-    Classes class6g = new Classes(1107, "qua", "Kiçi we orta telekeçilik kärhanalary üçin maliýe hasabatlylygynyň milli standartlary", "Esaslary", "4 Week", 250);
-    Classes class6h = new Classes(1108, "qua", "Döwlet býujet edaralary üçin maliýe hasabatlylygynyň milli standartlary", "Esaslary", "4 Week", 250);
-    Classes class6i = new Classes(1109, "qua", "Täjirçilik kärhanalary üçin maliýe hasabatlylygynyň milli standartlary", "Esaslary", "4 Week", 250);
-    Classes class6j = new Classes(1110, "qua", "Milli standartlara laýyklykda maliýe hasabatlylygynyň üýtgeşmesi (transformasiýasy)", "Esaslary", "4 Week", 650);
-    Classes class6k = new Classes(1111, "qua", "Maliýe hasabatlylygynyň halkara standarty 4: Ätiýaçlandyryş şertnamalary", "Esaslary", "4 Week", 300);
-    Classes class6l = new Classes(1112, "qua", "1S buhgalter hasaby", "Advanced", "4 Week", 400);
+    Classes class6b = new Classes(1102, "qua", "Maliýe hasabatlylygynyň halkara standartlary - Maliýe hasabaty-1", "Esaslary", "4 Hepde", 700);
+    Classes class6c = new Classes(1103, "qua", "Maliýe hasabatlylygynyň halkara standartlary - Dolandyryş hasaby-1", "Esaslary", "4 Hepde", 700);
+    Classes class6d = new Classes(1104, "qua", "Salgytlar we hukuk", "Esaslary", "4 Hepde", 700);
+    Classes class6e = new Classes(1105, "qua", "Maliýe hasabatlylygynyň halkara we milli standartlarynyň utgaşmasy", "Esaslary", "4 Hepde", 600);
+    Classes class6f = new Classes(1106, "qua", "Maliýe hasabatlylygynyň halkara we milli standartlarynyň utgaşmasy", "Esaslary", "4 Hepde", 800);
+    Classes class6g = new Classes(1107, "qua", "Kiçi we orta telekeçilik kärhanalary üçin maliýe hasabatlylygynyň milli standartlary", "Esaslary", "4 Hepde", 250);
+    Classes class6h = new Classes(1108, "qua", "Döwlet býujet edaralary üçin maliýe hasabatlylygynyň milli standartlary", "Esaslary", "4 Hepde", 250);
+    Classes class6i = new Classes(1109, "qua", "Täjirçilik kärhanalary üçin maliýe hasabatlylygynyň milli standartlary", "Esaslary", "4 Hepde", 250);
+    Classes class6j = new Classes(1110, "qua", "Milli standartlara laýyklykda maliýe hasabatlylygynyň üýtgeşmesi (transformasiýasy)", "Esaslary", "4 Hepde", 650);
+    Classes class6k = new Classes(1111, "qua", "Maliýe hasabatlylygynyň halkara standarty 4: Ätiýaçlandyryş şertnamalary", "Esaslary", "4 Hepde", 300);
+    Classes class6l = new Classes(1112, "qua", "1S buhgalter hasaby", "Advanced", "4 Hepde", 400);
     
     
     List<Classes> result = new ArrayList<>();

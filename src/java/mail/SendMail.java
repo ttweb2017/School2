@@ -5,13 +5,22 @@
  */
 package mail;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Properties;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Multipart;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 
 
@@ -54,8 +63,24 @@ public class SendMail {
             // Set Subject: header field
             message.setSubject("Register to Class");
 
+            BodyPart messageBodyPart = new MimeBodyPart();
+            
+            messageBodyPart.setText(msg);
+            
+            Multipart mulipart = new MimeMultipart();
+            
+            mulipart.addBodyPart(messageBodyPart);
+            
+            messageBodyPart = new MimeBodyPart();
+            
+            String fileName = "C:\\Users\\ACER\\Documents\\NetBeansProjects\\School\\SchoolRegister.pdf";
+            DataSource source = new FileDataSource(fileName);
+            messageBodyPart.setDataHandler(new DataHandler(source));
+            messageBodyPart.setFileName(fileName);
+            mulipart.addBodyPart(messageBodyPart);
+            
             // Now set the actual message
-            message.setText(msg);
+            message.setContent(mulipart);
 
             // Send message
             Transport.send(message);

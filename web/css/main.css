@@ -31,6 +31,13 @@
 /*------------------------------------------------------------------------------
                            IMAGE VIEW
 ------------------------------------------------------------------------------*/
+.baner{
+    width: 100%;
+}
+
+.marginSections{
+    margin-top: 5%;
+}
 
 .image  {
     -webkit-transition: all 1s ease; /* Safari and Chrome */
@@ -46,21 +53,746 @@
     -ms-transform:scale(1.25); /* IE 9 */
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.25);
+    cursor:pointer;
 }
 /*------------------------------------------------------------------------------
                            FOOTER
 ------------------------------------------------------------------------------*/
 
+#topLogo{
+    width: 90%;
+}
+
 .footerText {
-    color:#46b8da;
+    color:whitesmoke;
     font-size:.8em;
     line-height:18px;
     font-weight:100;
 }
 
+/* ==========================================================================
+                           Home design (index)
+   ========================================================================== */
+
+/*------------------------------------------------------------------------------
+                           Navigations
+------------------------------------------------------------------------------*/
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+    background-color: #521900;
+}
+
+.nav-justified > li > a{
+    color: #521900;
+    font-weight: bold;
+}
+
+.nav-justified > li > a:hover{
+    color: white;
+    background-color: #855e4c;
+    cursor:pointer;
+}
+
+.homeNav{
+    color: transparent;
+
+    background: url('../img/back.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+    padding-top: 4%;
+    padding-bottom: 6%;
+}
+
+.homeNavBack{
+    color: transparent;
+
+    background: url('../img/back.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+    padding-top: 8%;
+    padding-bottom: 6%;
+}
+
+/*nav items decor with background*/
+/*languages*/
+#school1a{
+    background-image: url('../img/eng.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school1a > div{
+    padding-top: 30%;padding-bottom: 30%;
+}
+
+#school1b{
+    background-image: url('../img/tur.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school1b > div{
+    padding-top: 60%;
+}
+
+#school1c{
+    background-image: url('../img/ru.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school1c > div{
+    padding-top: 60%;
+}
+
+#school1d{
+    background-image: url('../img/jap.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school1d > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school1e{
+    background-image: url('../img/chi.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school1e > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school1f{
+    background-image: url('../img/deu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school1f > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
 
 
-@media(min-width: 768px){
+/*busines*/
+#school2a{
+    background-image: url('../img/bus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school2a > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+#school2b{
+    background-image: url('../img/bus2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school2b > div{
+    padding-top: 30%;
+    padding-bottom: 12%;
+}
+
+#school2c{
+    background-image: url('../img/bus5.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school2c > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school2d{
+    background-image: url('../img/comp2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school2d > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school2e{
+    background-image: url('../img/bus4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school2e > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school2f{
+    background-image: url('../img/bus3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school2f > div{
+    padding-top: 30%;
+    padding-bottom: 12%;
+}
+
+/*Computers*/
+#school3a{
+    background-image: url('../img/comp.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school3a > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+#school3b{
+    background-image: url('../img/comp3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school3b > div{
+    padding-top: 30%;
+    padding-bottom: 12%;
+}
+
+#school3c{
+    background-image: url('../img/comp6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school3c > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+#school3d{
+    background-image: url('../img/comp4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school3d > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+/*Design*/
+#school4a{
+    background-image: url('../img/des1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school4a > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+#school4b{
+    background-image: url('../img/des2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school4b > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school4c{
+    background-image: url('../img/des.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school4c > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school4d{
+    background-image: url('../img/des6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school4d > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school4e{
+    background-image: url('../img/des13.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school4e > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+/*others*/
+#school5a{
+    background-image: url('../img/other1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school5a > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+#school5b{
+    background-image: url('../img/other.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school5b > div{
+    padding-top: 30%;
+    padding-bottom: 12%;
+}
+
+#school5c{
+    background-image: url('../img/other4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school5c > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school5d{
+    background-image: url('../img/other6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school5d > div{
+    padding-top: 30%;
+    padding-bottom: 20%;
+}
+
+#school5e{
+    background-image: url('../img/other3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school5e > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school5f{
+    background-image: url('../img/other2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school5f > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+
+/*Qualification*/
+#school6a{
+    background-image: url('../img/qua.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school6a > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school6b{
+    background-image: url('../img/qua1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school6b > div{
+    padding-top: 13%;
+    padding-bottom: 2%;
+}
+
+#school6c{
+    background-image: url('../img/qua3.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school6c > div{
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+#school6d{
+    background-image: url('../img/qua5.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school6d > div{
+    padding-top: 20%;
+    padding-bottom: 3%;
+}
+
+#school6e{
+    background-image: url('../img/qua6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school6e > div{
+    padding-top: 16%;
+    padding-bottom: 7%;
+}
+
+#school6f{
+    background-image: url('../img/qua4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #521900;
+    font-weight: bold;
+}
+#school6f > div{
+    padding-top: 30%;
+    padding-bottom: 3%;
+}
+
+/*Advantages*/
+#advantage1{
+    background-image: url('../img/1.png');
+    background-repeat: no-repeat;
+    background-position: 10% 0%;
+    padding-top: 4%;
+}
+#advantage2{
+    background-image: url('../img/2.png');
+    background-repeat: no-repeat;
+    background-position: 30% 0%;
+    padding-top: 4%;
+}
+#advantage3{
+    background-image: url('../img/3.png');
+    background-repeat: no-repeat;
+    background-position: 20% 0%;
+    padding-top: 4%;
+}
+/* ==========================================================================
+   Contact us design
+   ========================================================================== */
+
+.contactUs-float {
+    position: fixed;
+    background-color: #521900;
+    float: right;
+    transform-origin: right top;
+    transition: padding 1s ease 0s, background-color .5s ease 0s;
+    transform: rotate(90deg);
+    top: 476px;
+    z-index: 999;
+    right: 0;
+    -webkit-transform-origin: right top 0;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.contactUs-float a {
+    color: white;
+    float: right;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    padding: 8px 25px 9px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.contactUs-float:hover {
+    background-color:#1d83a5;
+}
+
+.smscreen {
+    display:none;
+}
+
+@media (max-width: 992px){
+
+    .lgscreen {
+        display:none;
+    }
+    .smscreen {
+        display:inline !IMPORTANT;
+        -webkit-transform: rotate(270deg) !important;
+        transform: rotate(270deg)!important;
+        padding:15px !important;
+    }
+}
+
+/* ==========================================================================
+   Body and text staff
+   ========================================================================== */
+.topAndBottomMargin{
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+#rollTop{
+    display: none;
+}
+
+#rollBottom{
+    display: none;
+}
+
+.peroPic{
+    background-image: url('../img/pero.png');
+    background-repeat: no-repeat;
+    height: 175px;
+}
+
+.teacherBack{
+    background: url('../img/paperRoll.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.teacherPhoto{
+    float: right;
+    width: 80%;
+}
+.teacherPadding{
+    padding-right: 2%;
+}
+
+.titleColor{
+    color: #521900;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'DINPro';
+}
+
+.saying{
+    color: white;
+    font-weight: normal;
+    font-family: 'Book Antiqua';
+}
+
+.homePageText{
+    color: #000;
+    font-size: 100%;
+    font-family: 'DINPro';
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.titleMargin{
+    margin-bottom: 3%;
+}
+
+#filosofSmall{
+    display: none;
+}
+
+/* ==========================================================================
+   Media (screen)
+   ========================================================================== */
+
+@media (min-width: 992px){
+    #filosof{
+        position: absolute;
+        margin-top: -5%;
+        margin-right: -4%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .carousel-caption{
+        padding-bottom: 22%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    #topLogo{
+        width: 45%;
+    }
+
+    #footerImg {
+        display:none;
+    }
+
+    #clock{
+        display:none;
+    }
+
+    #footerImg2{
+        display: block;
+        margin: auto;
+        width: 40%;
+    }
+
+    #filosof{
+        display: none;
+    }
+
+    #filosofSmall{
+        display: block;
+        margin: auto;
+        width: 40%;
+    }
+
+    #arrowSignBig{
+        display: none;
+    }
+
+    #filosof{
+        display: none;
+    }
+
+    .teacherPhoto{
+        display: block;
+        margin: auto;
+        width: 40%;
+        float: none;
+    }
+
+    .homeNav{
+        color: transparent;
+
+        background: url('../img/back.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        /*background-attachment: fixed;*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 100% 100%;
+        padding-top: 15%;
+        padding-bottom: 20%;
+    }
+
+    .homeNavBack{
+        color: transparent;
+
+        background: url('../img/rollPaperBody.png');
+        background-repeat: no-repeat;
+        /*background-attachment: fixed;*/
+        background-position: 10% center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 97% 97%;
+        margin-bottom: -2%;
+        margin-top: -2%;
+    }
+
+    #rollTop{
+        display: block;
+    }
+
+    #rollBottom{
+        display: block;
+    }
+
+    .peroPic{
+        background-image: url('../img/pero.png');
+        background-repeat: no-repeat;
+        background-position: 10% center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 100% 100%;
+        height: 90px;
+    }
+
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, 
+    .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
+        border: 0.2em solid #080808;
+    }
+
+    .row{
+        border: 0.2em solid #080808;
+    }
+}
+
+@media (min-width: 768px){
+
     .navbar .navbar-nav{
         display: inline-block;
         float: none;
@@ -69,4 +801,205 @@
     .navbar-collapse{
         text-align: center;
     }
+}
+
+@media (max-width: 767px){
+
+    .carousel-caption{
+        padding-bottom: 17%;
+    }
+    .carousel-caption > h3{
+        font-size: 18px;
+    }
+
+    .carousel-caption > h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .carousel-caption{
+        padding-bottom: 10%;
+    }
+
+    .carousel-caption > h3{
+        font-size: 12px;
+    }
+
+    .carousel-caption > h2{
+        font-size: 14px;
+    }
+
+    #busSmall{
+        font-size: 15px;
+    }
+
+    #jumpId > div > div > h4.titleColor{
+        font-size: 14px;
+    }
+}
+
+/* ==========================================================================
+                                 ALL COURSES AND ABOUT COURSES
+   ========================================================================== */
+.brownColor{
+    color: #521900;
+    font-family: 'Book Antiqua';
+}
+
+.btn-primary{
+    background-image: linear-gradient(to bottom,#855e4c 0,#521900 100%);
+    border-color: #000;
+    background-color: #855e4c;
+    font-family: 'Book Antiqua';
+}
+
+.btn-primary:hover{
+    border-color: #855e4c;
+    background-color: #855e4c;
+}
+
+.tableBack{
+    margin-top: 5%;
+    background-image: url('../img/rollPaperBody.png');
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.courseBack{
+    background-image: url('../img/tableBackground.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size: 100% 100%;
+    padding: 10% 3%;
+}
+
+.courseBack > .col-md-4 > a > div{
+    background-color: #855e4c;
+    color: white;
+    margin-bottom: 3%;
+    font-family: 'Book Antiqua';
+}
+
+.courseBack > .col-md-4 > a > div.col-md-12:hover, .courseBack > .col-md-4 > a > div.col-md-12:active{
+    background-color: #521900;
+}
+
+.teacherDesign{
+    background-color: #855e4c;
+    border: 0.1em solid #521900;
+    border-radius: 2em;
+}
+
+.levelBorder{
+    border: 0.1em solid #521900;
+    border-radius: 1em;
+    padding-top: 1%;
+}
+
+.marginTop3{
+    margin-top: 3%;
+}
+
+@media screen and (max-width: 992px){
+
+    .courseBack{
+
+        background: url('../img/rollPaperBody.png');
+        background-repeat: no-repeat;
+        background-position: 10% center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-size: 97% 100%;
+
+    }
+}
+
+/* ==========================================================================
+                               Teachers page
+   ========================================================================== */
+.teacherText{
+    color: #000;
+    font-size: 100%;
+    font-family: 'DINPro';
+    text-align: center;
+}
+
+.teacherImg{
+    width: 100%;
+}
+
+.nonDecor{
+    text-decoration: none;
+}
+
+.teacherPhone{
+    width: 50%;
+}
+
+@media (min-width: 768px){
+    .teacherCarousel{
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    .teachers{
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Registration design
+   ========================================================================== */
+
+*[role="form"] {
+    max-width: 680px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+/* ==========================================================================
+                           NEWS design
+   ========================================================================== */
+#news1 > div > div{
+    float: left;
+    margin-right: 3%;
+}
+#news2 > div > div{
+    float: left;
+    margin-right: 3%;
+}
+#news3 > div > div{
+    float: left;
+    margin-right: 3%;
+}
+#news4 > div > div{
+    float: left;
+    margin-right: 3%;
+}
+#news5 > div > div{
+    float: left;
+    margin-right: 3%;
+}
+
+/*text indent*/
+form > div > dl > dd{
+    text-indent: 5%;
 }

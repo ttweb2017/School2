@@ -3,6 +3,9 @@
     Created on : Jun 7, 2017, 9:37:49 AM
     Author     : Shagy
 --%>
+<%-- Set session-scoped variable to track the view user is coming from.
+     This is used by the language mechanism in the Controller so that
+     users view the same page when switching between Russian and Turkmen. --%>
 <c:set var='view' value='/index' scope='session' />
 <!--CAROUSEL ************************************************************-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -18,39 +21,42 @@
     <div class="carousel-inner">
         <div class="item active">
             <center>
-                <img src="img/400x100_pic1.png" 
-                     class="img-responsive img-thumbnail" alt="School" style="width: 100%;">
+                <img src="img/baner1.png" 
+                     class="img-responsive img-thumbnail baner" alt="School"><!--img/400x100_pic1.png-->
             </center>
             <div class="carousel-caption">
-                <h3>School</h3>
-                <p>here is little bit about the School.</p>
+                <h2><b><fmt:message key="bussinesSchool"/></b></h2>
+                <h3><b><fmt:message key="improveTm"/></b></h3>
             </div>
         </div>
 
         <div class="item">
-            <center><img src="img/400x100_pic2.jpg" 
-                         class=" img-responsive img-thumbnail" alt="School" style="width: 100%;"></center>
+            <center><img src="img/baner2.png"  
+                         class=" img-responsive img-thumbnail baner" alt="School"><!--img/400x100_pic1.png-->
+            </center>
             <div class="carousel-caption">
-                <h3>School</h3>
-                <p>here is little bit about the School.</p>
+                <h2><b><fmt:message key="bussinesSchool"/></b></h2>
+                <h3><b><fmt:message key="improveTm"/></b></h3>
             </div>
         </div>
 
         <div class="item">
-            <center><img src="img/400x100_pic3.png" 
-                         class="img-responsive img-thumbnail" alt="School" style="width: 100%;"></center>
+            <center><img src="img/baner1.png"  
+                         class="img-responsive img-thumbnail baner" alt="School"><!--img/400x100_pic1.png-->
+            </center>
             <div class="carousel-caption">
-                <h3>School</h3>
-                <p>here is little bit about the School.</p>
+                <h2><b><fmt:message key="bussinesSchool"/></b></h2>
+                <h3><b><fmt:message key="improveTm"/></b></h3>
             </div>
         </div>
 
         <div class="item">
-            <center><img src="img/400x100_pic4.png" 
-                         class="img-responsive img-thumbnail" alt="School" style="width: 100%;"></center>
+            <center><img src="img/baner2.png"  
+                         class="img-responsive img-thumbnail baner" alt="School"><!--img/400x100_pic1.png-->
+            </center>
             <div class="carousel-caption">
-                <h3>School</h3>
-                <p>here is little bit about the School.</p>
+                <h2><b><fmt:message key="bussinesSchool"/></b></h2>
+                <h3><b><fmt:message key="improveTm"/></b></h3>
             </div>
         </div>
     </div>
@@ -65,817 +71,768 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="container">
-    <div class="row" style="margin-top: 5%;">
-        <nav class="navbar navbar-default navbar-custom">
 
-            <ul class="nav navbar-nav">
-                <li id="languages" class="active"><a onclick="myFunction()"><fmt:message key="languages"/></a></li>
+<!-- Main container starts here *********************************-->
+<div class="container topAndBottomMargin">
+
+    <!--Sub menu ************************************************************-->
+    <div class="row homeNavBack">
+        <div id="rollTop">
+            <img class="img-responsive" src="img/rollPaperTop.png" alt="paperTop">
+        </div>
+
+        <div class="col-md-offset-1 col-md-10">
+
+            <ul class="nav nav-pills nav-justified"><!--nav nav-pills nav-stacked ////nav navbar-nav-->
+                <li id="languages" class="active"><a onclick="myFunction()" class="homeTextColorBrown"><fmt:message key="languages"/></a></li>
                 <li id="homeBussines"><a onclick="myFunction2()"><fmt:message key="bussines"/></a></li>
                 <li id="computer"><a onclick="myFunction3()"><fmt:message key="computer"/></a></li>
                 <li id="qualification"><a onclick="myFunction6()"><fmt:message key="qualification"/></a></li>
                 <li id="design"><a onclick="myFunction4()"><fmt:message key="design"/></a></li>
                 <li id="others"><a onclick="myFunction5()"><fmt:message key="others"/></a></li>
             </ul>
-        </nav>
-        <div class="col-md-12" id="school1">
-            <div class="row">
-                <a href="<c:url value='eng'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseEng"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="engHrs"/></i><br>
 
-                            <i class="fa fa-calendar-o"> <fmt:message key="engPeriod"/></i><br>
+            <div class="col-md-12" id="school1">
+                <div class="row">
+                    <a href="<c:url value='eng'/>#jumpId">
+                        <div class="col-md-3" id="school1a">
+                            <div class="col-md-12 img-rounded">
+
+                                <p class="text-center">
+                                    <fmt:message key="courseEng"/>
+                                </p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    <a href="<c:url value='tur'/>#jumpId">
+                        <div class="col-md-3" id="school1b">
+                            <div class="col-md-12 img-rounded">
 
-                </a>
-                <a href="<c:url value='tur'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseTur"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="turHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="turPeriod"/></i><br>
+                                <p class="text-center">
+                                    <fmt:message key="courseTur"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="<c:url value='rus'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseRus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="rusHrs"/></i><br>
+                    </a>
+                    <a href="<c:url value='rus'/>#jumpId">
+                        <div class="col-md-3" id="school1c">
+                            <div class="col-md-12 img-responsive">
 
-                            <i class="fa fa-calendar-o"> <fmt:message key="rusPeriod"/></i><br>
+                                <p class="text-center">
+                                        <fmt:message key="courseRus"/></p>
+                                <center>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </center><br>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="<c:url value='jap'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseJap"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="japHrs"/></i><br>
+                    </a>
+                    <a href="<c:url value='jap'/>#jumpId">
+                        <div class="col-md-3" id="school1d">
+                            <div class="col-md-12 img-rounded">
 
-                            <i class="fa fa-calendar-o"> <fmt:message key="japPeriod"/></i><br>
+                                <p class="text-center">
+                                    <fmt:message key="courseJap"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="row" style="margin-top: 2%;">
-                <a href="<c:url value='chi'/>">
-                    <div class="col-md-offset-3 col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseChi"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="chiHrs"/></i><br>
+                    </a>
+                </div>
+                <div class="row" style="margin-top: 2%;">
+                    <a href="<c:url value='chi'/>#jumpId">
+                        <div class="col-md-3" id="school1e">
+                            <div class="col-md-12 img-rounded">
 
-                            <i class="fa fa-calendar-o"> <fmt:message key="chiPeriod"/></i><br>
+                                <p class="text-center">
+                                    <fmt:message key="courseChi"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="<c:url value='deu'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDeu"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="deuHrs"/></i><br>
+                    </a>
+                    <a href="<c:url value='deu'/>#jumpId">
+                        <div class="col-md-3" id="school1f">
+                            <div class="col-md-12 img-rounded">
 
-                            <i class="fa fa-calendar-o"> <fmt:message key="deuPeriod"/></i><br>
+                                <p class="text-center">
+                                    <fmt:message key="courseDeu"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!--Business Classes-->
-        <div class="col-md-12" id="school2" style="display: none;">
-            <!--Business classes second row-->
-            <div class="row">
-                <a href="<c:url value='bus'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseBus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="busHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="busPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='bus'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseBus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="busHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="busPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='bus'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseBus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="busHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="busPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--Business classes second row-->
-            <div class="row" style="margin-top: 2%;">
-                <a href="<c:url value='bus'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseBus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="busHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="busPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='bus'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseBus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="busHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="busPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='bus'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseBus"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="busHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="busPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-12" id="school3" style="display: none;">
-            <a href="<c:url value='com'/>">
-                <div class="col-md-3" >
-                    <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                        <img src="" alt="photo">
-                        <p class="text-center"><fmt:message key="courseComp"/></p>
-                        <center>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </center><br>
-                        <i class="fa fa-clock-o"> <fmt:message key="comHrs"/></i><br>
-
-                        <i class="fa fa-calendar-o"> <fmt:message key="comPeriod"/></i><br>
+                    </a>
+                    <div class="col-md-offset-1 col-md-4 peroPic">
                     </div>
                 </div>
-            </a>
-            <a href="<c:url value='com'/>">
-                <div class="col-md-3" >
-                    <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                        <img src="" alt="photo">
-                        <p class="text-center"><fmt:message key="courseComp"/></p>
-                        <center>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </center><br>
-                        <i class="fa fa-clock-o"> <fmt:message key="comHrs"/></i><br>
+            </div>
 
-                        <i class="fa fa-calendar-o"> <fmt:message key="comPeriod"/></i><br>
+            <!--Business Classes-->
+            <div class="col-md-12" id="school2" style="display: none;">
+                <!--Business classes first row-->
+                <div class="row">
+                    <a href="<c:url value='bus'/>#jumpId">
+                        <div class="col-md-3" id="school2a">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="bussines1"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='bus'/>#jumpId">
+                        <div class="col-md-3" id="school2b">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="bussines2"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='bus'/>#jumpId">
+                        <div class="col-md-3" id="school2c">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="bussines3"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='bus'/>#jumpId">
+                        <div class="col-md-3" id="school2d">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="bussines4"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--Business classes second row-->
+                <div class="row" style="margin-top: 2%;">
+                    <a href="<c:url value='bus'/>#jumpId">
+                        <div class="col-md-3" id="school2e">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="bussines5"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='bus'/>#jumpId">
+                        <div class="col-md-3" id="school2f">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="bussines6"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="col-md-offset-1 col-md-4 peroPic">
                     </div>
                 </div>
-            </a>
-            <a href="<c:url value='com'/>">
-                <div class="col-md-3" >
-                    <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                        <img src="" alt="photo">
-                        <p class="text-center"><fmt:message key="courseComp"/></p>
-                        <center>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </center><br>
-                        <i class="fa fa-clock-o"> <fmt:message key="comHrs"/></i><br>
+            </div>
 
-                        <i class="fa fa-calendar-o"> <fmt:message key="comPeriod"/></i><br>
+            <div class="col-md-12" id="school3" style="display: none;">
+                <a href="<c:url value='com'/>#jumpId">
+                    <div class="col-md-3" id="school3a">
+                        <div class="col-md-12 img-rounded">
+                            <p class="text-center"><fmt:message key="computer1"/></p>
+                            <center>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </center><br>
+                        </div>
+                    </div>
+                </a>
+                <a href="<c:url value='com'/>#jumpId">
+                    <div class="col-md-3" id="school3b">
+                        <div class="col-md-12 img-rounded">
+                            <p class="text-center"><fmt:message key="computer2"/></p>
+                            <center>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </center><br>
+                        </div>
+                    </div>
+                </a>
+                <a href="<c:url value='com'/>#jumpId">
+                    <div class="col-md-3" id="school3c">
+                        <div class="col-md-12 img-rounded">
+                            <p class="text-center"><fmt:message key="computer3"/></p>
+                            <center>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </center><br>
+                        </div>
+                    </div>
+                </a>
+                <a href="<c:url value='com'/>#jumpId">
+                    <div class="col-md-3" id="school3d">
+                        <div class="col-md-12 img-rounded">
+                            <p class="text-center"><fmt:message key="computer4"/></p>
+                            <center>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </center><br>
+                        </div>
+                    </div>
+                </a>
+                <div class="row">
+                    <div class="col-md-offset-7 col-md-4 peroPic" style="margin-top: 2.3%;margin-bottom: 1.8%;">
                     </div>
                 </div>
-            </a>
-            <a href="<c:url value='com'/>">
-                <div class="col-md-3" >
-                    <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                        <img src="" alt="photo">
-                        <p class="text-center"><fmt:message key="courseComp"/></p>
-                        <center>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </center><br>
-                        <i class="fa fa-clock-o"> <fmt:message key="comHrs"/></i><br>
+            </div>
 
-                        <i class="fa fa-calendar-o"> <fmt:message key="comPeriod"/></i><br>
+            <div class="col-md-12" id="school4" style="display: none;">
+                <div class="row">
+                    <a href="<c:url value='des'/>#jumpId">
+                        <div class="col-md-3" id="school4a">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="design1"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='des'/>#jumpId">
+                        <div class="col-md-3" id="school4b">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="design2"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='des'/>#jumpId">
+                        <div class="col-md-3" id="school4c">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="design3"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='des'/>#jumpId">
+                        <div class="col-md-3" id="school4d">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="design4"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row" style="margin-top: 2%;">
+                    <a href="<c:url value='des'/>#jumpId">
+                        <div class="col-md-3" id="school4e">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="design5"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="col-md-offset-4 col-md-4 peroPic">
                     </div>
                 </div>
-            </a>
+            </div>
+
+            <div class="col-md-12" id="school5" style="display: none;">
+                <!--Others classes first row-->
+                <div class="row">
+                    <a href="<c:url value='other'/>#jumpId">
+                        <div class="col-md-3" id="school5a">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="others1"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='other'/>#jumpId">
+                        <div class="col-md-3" id="school5b">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="others2"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='other'/>#jumpId">
+                        <div class="col-md-3" id="school5c">
+                            <div class="col-md-12 img-rounded" style="padding-top: 30%;padding-bottom: 30%;">
+                                <p class="text-center"><fmt:message key="others3"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='other'/>#jumpId">
+                        <div class="col-md-3" id="school5d">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="others4"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--Others classes second row-->
+                <div class="row" style="margin-top: 2%;">
+                    <a href="<c:url value='other'/>#jumpId">
+                        <div class="col-md-3" id="school5e">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="others5"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='other'/>#jumpId">
+                        <div class="col-md-3" id="school5f">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="others6"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="col-md-offset-1 col-md-4 peroPic">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" id="school6" style="display: none;">
+                <!--qualification classes first row-->
+                <div class="row">
+                    <a href="<c:url value='qua'/>#jumpId">
+                        <div class="col-md-3" id="school6a">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="qualification1"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='qua'/>#jumpId">
+                        <div class="col-md-3" id="school6b">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="qualification2"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='qua'/>#jumpId">
+                        <div class="col-md-3" id="school6c">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="qualification3"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='qua'/>#jumpId">
+                        <div class="col-md-3" id="school6d">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="qualification4"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--qualification classes second row-->
+                <div class="row" style="margin-top: 2%;">
+                    <a href="<c:url value='qua'/>#jumpId">
+                        <div class="col-md-3" id="school6e">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="qualification5"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="<c:url value='qua'/>#jumpId">
+                        <div class="col-md-3" id="school6f">
+                            <div class="col-md-12 img-rounded">
+                                <p class="text-center"><fmt:message key="qualification6"/></p>
+                                <center>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </center><br>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="col-md-offset-1 col-md-4 peroPic">
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <div class="col-md-12" id="school4" style="display: none;">
-            <div class="row">
-                <a href="<c:url value='des'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDes"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="desHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="desPeriod"/></i><br>
-                        </div>
-                    </div>
-
-                </a>
-                <a href="<c:url value='des'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDes"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="desHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="desPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='des'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDes"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="desHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="desPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='des'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDes"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="desHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="desPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="row" style="margin-top: 2%;">
-                <a href="<c:url value='des'/>">
-                    <div class="col-md-offset-3 col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDes"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="desHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="desPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='des'/>">
-                    <div class="col-md-3" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseDes"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="desHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="desPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-12" id="school5" style="display: none;">
-            <!--Others classes first row-->
-            <div class="row">
-                <a href="<c:url value='other'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseOther"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="otherHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="otherPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='other'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseOther"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="otherHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="otherPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='other'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseOther"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="otherHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="otherPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--Others classes second row-->
-            <div class="row" style="margin-top: 2%;">
-                <a href="<c:url value='other'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseOther"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="otherHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="otherPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='other'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseOther"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="otherHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="otherPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='other'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseOther"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="otherHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="otherPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-12" id="school6" style="display: none;">
-            <!--Others classes first row-->
-            <div class="row">
-                <a href="<c:url value='qua'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseQua"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="quaHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="quaPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='qua'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseQua"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="quaHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="quaPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='qua'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseQua"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="quaHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="quaPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--Others classes second row-->
-            <div class="row" style="margin-top: 2%;">
-                <a href="<c:url value='qua'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseQua"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="quaHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="quaPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='qua'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseQua"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="quaHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="quaPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-                <a href="<c:url value='qua'/>">
-                    <div class="col-md-4" >
-                        <div class="col-md-12 img-rounded" style="border: 0.1em solid;">
-                            <img src="" alt="photo">
-                            <p class="text-center"><fmt:message key="courseQua"/></p>
-                            <center>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </center><br>
-                            <i class="fa fa-clock-o"> <fmt:message key="quaHrs"/></i><br>
-
-                            <i class="fa fa-calendar-o"> <fmt:message key="quaPeriod"/></i><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div id="rollBottom">
+            <img class="img-responsive" src="img/rollPaperBottom.png" alt="paperTop">
         </div>
     </div>
 
-    <div class="row img-rounded" style="margin-top: 5%;background-color: #843534;color: snow;">
-        <div class="col-md-12" style="margin-top: 4%;">
+    <!--CERTIFICATE *********************************************************-->
+    <div class="row marginSections">
+        <div class="col-md-10" style="margin-top: 2%;">
             <div class="col-md-2 text-right">
-                <i class="fa fa-5x fa-star-o"></i>
+                <img class="img-responsive" src="img/logo.png" alt="smallLogoPhoto">
             </div>
-            <div class="col-md-3 col-md-push-0 text-left">
-                <h4><fmt:message key="experienceTitle"/></h4>
+            <div class="col-md-10 col-md-push-0 text-left">
+                <h2 class="titleColor"><fmt:message key="experienceTitle"/></h2>
+            </div>
+
+
+            <div class="col-md-12" style="margin-top: 2%;">
+                <div class="col-md-4">
+                    <h4 class="titleColor text-center"><fmt:message key="experience"/></h4>
+                    <p class="text-left homePageText"><fmt:message key="experienceText"/></p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="titleColor text-center"><fmt:message key="education"/></h4>
+                    <p class="text-left homePageText"><fmt:message key="educationText"/></p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="titleColor text-center"><fmt:message key="certificate"/></h4>
+                    <p class="text-left homePageText"><fmt:message key="certificateText"/></p>
+                </div>
             </div>
         </div>
-
-        <div class="col-md-12" style="margin-top: 4%;">
-            <div class="col-md-4 text-center">
-                <h4><fmt:message key="experience"/></h4>
-                <p><fmt:message key="experienceText"/></p>
-            </div>
-            <div class="col-md-4 text-center">
-                <h4><fmt:message key="education"/></h4>
-                <p><fmt:message key="educationText"/></p>
-            </div>
-            <div class="col-md-4 text-center">
-                <h4><fmt:message key="certificate"/></h4>
-                <p><fmt:message key="certificateText"/></p>
-            </div>
+        <div class="col-md-2">
+            <img id="clock" class="img-responsive" src="img/clock.png" alt="clockPhoto">
         </div>
     </div>
 
-    <div class="row" style="margin-top: 5%;">
-        <div class="col-md-12 text-center img-rounded" 
-             style="background-color: #888;color: whitesmoke;margin-bottom: 2%;">
-            <h4><fmt:message key="aboutUs"/></h4>
+    <!--About Us ************************************************************-->
+    <div class="row marginSections">
+        <!--Title About Us-->
+        <div class="col-md-12 titleMargin">
+            <center>
+                <h4 class="titleColor"><fmt:message key="aboutUs"/></h4>
+                <img class="img-responsive" src='img/titleDecor.png' alt='titleDecorPhoto'>
+            </center>
         </div>
 
+        <div class="col-md-6" style="padding-left: 0;padding-bottom: 0.7%;">
+            <img class="img-responsive" src="img/cova1.png" alt="photoSokol" style="width: 100%;">
+        </div>
         <div class="col-md-6">
-            <p><fmt:message key="aboutUsText"/></p>
-            <p><fmt:message key="aboutUsText2"/></p>
-        </div>
-        <div class="col-md-6">
-            <img src="" alt="photo">
+            <h5 class="titleColor text-center"><fmt:message key="aboutUsTitle"/></h5>
+            <p class="homePageText"><fmt:message key="aboutUsText"/></p>
+            <p class="homePageText"><fmt:message key="aboutUsText2"/></p>
+            <p class="homePageText"><fmt:message key="aboutUsText3"/></p>
+            <p class="homePageText"><fmt:message key="aboutUsText4"/></p>
+
         </div>
     </div>
 
-    <div class="row" style="margin-top: 5%;">
-        <div class="col-md-12 text-center img-rounded" 
-             style="background-color: #888;color: whitesmoke;margin-bottom: 2%;">
-            <h4><fmt:message key="ourAdvantages"/></h4>
+    <!--Advantages **********************************************************-->
+    <div class="row marginSections">
+        <!--Title Advantages-->
+        <div class="col-md-12 titleMargin">
+            <center>
+                <h4 class="titleColor"><fmt:message key="ourAdvantages"/></h4>
+                <img class="img-responsive" src='img/titleDecor.png' alt='titleDecorPhoto'>
+            </center>
         </div>
 
-        <div class="col-md-4">
-            <img src="" alt="photo">
-            <h5><fmt:message key="ourAdvantagesTextTitle"/></h5>
-            <p><fmt:message key="ourAdvantagesText"/></p>
+        <div class="col-md-4" id="advantage1">
+            <center>
+                <img class="img-responsive" src="img/sunduk.png" alt="photo">
+                <h4 class="titleColor"><fmt:message key="ourAdvantagesTextTitle"/></h4>
+            </center>
         </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-            <h5><fmt:message key="ourAdvantagesTextTitle2"/></h5>
-            <p><fmt:message key="ourAdvantagesText2"/></p>
+        <div class="col-md-4" id="advantage2">
+            <center>
+                <img class="img-responsive" src="img/sokol4.png" alt="photo">
+                <h4 class="titleColor"><fmt:message key="ourAdvantagesTextTitle2"/></h4>
+            </center>
         </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-            <h5><fmt:message key="ourAdvantagesTextTitle3"/></h5>
-            <p><fmt:message key="ourAdvantagesText3"/></p>
+        <div class="col-md-4" id="advantage3">
+            <center>
+                <img class="img-responsive" src="img/shit2.png" alt="photo">
+                <h4 class="titleColor"><fmt:message key="ourAdvantagesTextTitle3"/></h4>
+            </center>
         </div>
     </div>
 
-    <div class="row" style="margin-top: 5%;">
-        <div class="col-md-12 text-center img-rounded" 
-             style="background-color: #888;color: whitesmoke;margin-bottom: 2%;">
-            <h4><fmt:message key="homeNews"/></h4>
+    <!--NEWS ****************************************************************-->
+    <div class="row homeNav marginSections">
+        <!--Title News-->
+        <div class="col-md-12">
+            <center>
+                <h4 class="titleColor"><fmt:message key="homeNews"/></h4>
+                <img class="img-responsive" src='img/titleDecor.png' alt='titleDecorPhoto'>
+            </center>
         </div>
 
-        <div class="col-md-4">
-            <img src="" alt="photo">
-            <p><fmt:message key="homeNewsText"/></p>
-        </div>
-        <div class="col-md-4">
-            <p><fmt:message key="homeNewsText2"/></p>
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-            <p><fmt:message key="homeNewsText3"/></p>
-        </div>
-    </div>
-
-    <div class="row" style="margin-top: 5%;">
-        <div class="col-md-12 text-center img-rounded" 
-             style="background-color: #888;margin-bottom: 2%;color: white;">
-            <h4><fmt:message key="saying"/></h4>
-            <h4><fmt:message key="saying1"/></h4>
-        </div>
-    </div>
-
-    <div class="row" style="margin-top: 5%;">
-        <div class="col-md-12 text-center img-rounded" 
-             style="background-color: #888;color: whitesmoke;margin-bottom: 2%;">
-            <h4><fmt:message key="homeTeachers"/></h4>
-        </div>
-
-        <div class="col-md-6">
+        <div class="col-md-offset-1 col-md-10">
             <div class="col-md-4">
                 <img src="" alt="photo">
+                <p class="homePageText"><fmt:message key="homeNewsText"/></p>
             </div>
-            <div class="col-md-8 pull-left">
-                <h4><fmt:message key="homeTeacher1"/></h4>
-                <h7><fmt:message key="homeTeacherTitle1"/></h7>
-                <p><fmt:message key="homeTeacherText1"/></p>
-            </div>
-        </div>
-        <div class="col-md-6">
             <div class="col-md-4">
+                <p class="homePageText"><fmt:message key="homeNewsText2"/></p>
                 <img src="" alt="photo">
             </div>
-            <div class="col-md-8 pull-left">
-                <h4><fmt:message key="homeTeacher2"/></h4>
-                <h7><fmt:message key="homeTeacherTitle2"/></h7>
-                <p><fmt:message key="homeTeacherText2"/></p>
-            </div>
-        </div>
-        <div class="col-md-6">
             <div class="col-md-4">
                 <img src="" alt="photo">
-            </div>
-            <div class="col-md-8 pull-left">
-                <h4><fmt:message key="homeTeacher3"/></h4>
-                <h7><fmt:message key="homeTeacherTitle3"/></h7>
-                <p><fmt:message key="homeTeacherText3"/></p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="col-md-4">
-                <img src="" alt="photo">
-            </div>
-            <div class="col-md-8 pull-left">
-                <h4><fmt:message key="homeTeacher4"/></h4>
-                <h7><fmt:message key="homeTeacherTitle4"/></h7>
-                <p><fmt:message key="homeTeacherText4"/></p>
+                <p class="homePageText"><fmt:message key="homeNewsText3"/></p>
             </div>
         </div>
     </div>
 
-    <div class="row" style="margin-top: 5%;">
-        <div class="col-md-12 text-center img-rounded" 
-             style="background-color: #888;color: whitesmoke;margin-bottom: 2%;">
-            <h4><fmt:message key="homeGallery"/></h4>
-        </div>
+    <!--Saying **************************************************************-->
+    <div class="row marginSections">
+        <div class="col-md-12 img-rounded" 
+             style="background-color: #521900;padding-bottom: 3%;padding-top: 3%;">
+            <div id="arrowSignBig" class="col-md-4 text-right">
+                <img class="img-responsive" src="img/angleSign.png" alt="sign">
+            </div>
 
-        <div class="col-md-4">
-            <img src="" alt="photo">
+            <div id="filosofSmall" class="col-md-4 col-md-pull-9">
+                <img class="img-responsive" src="img/filosof.png" alt="sign">
+            </div>
+
+            <div class="col-md-8">
+                <h2 class="saying"><fmt:message key="saying"/></h2>
+                <h3 class="saying text-right"><fmt:message key="saying1"/></h3>
+            </div>
         </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
-        </div>
-        <div class="col-md-4">
-            <img src="" alt="photo">
+        <div id="filosof" class="col-md-1 col-md-pull-9">
+            <img src="img/filosof.png" alt="sokratPhoto">
         </div>
     </div>
+
+    <!--Teachers ************************************************************-->
+    <div class="row marginSections">
+        <div class="col-md-12 titleMargin">
+            <center>
+                <h4 class="titleColor"><fmt:message key="homeTeachers"/></h4>
+                <img class="img-responsive" src='img/titleDecor.png' alt='titleDecorPhoto'>
+            </center>
+        </div>
+
+        <div class="col-md-6 teacherBack">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded teacherPhoto" src="img/teacher3.png" alt="photo">
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="titleColor"><fmt:message key="homeTeacher3"/></h4>
+                    <h7 class="titleColor"><fmt:message key="homeTeacherTitle3"/></h7>
+                    <p class="homePageText"><fmt:message key="homeTeacherText3"/></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 teacherBack">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded teacherPhoto" src="img/teacher2.png" alt="photo">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="titleColor"><fmt:message key="homeTeacher2"/></h4>
+                    <h7 class="titleColor"><fmt:message key="homeTeacherTitle2"/></h7>
+                    <p class="homePageText"><fmt:message key="homeTeacherText2"/></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 teacherBack">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded teacherPhoto" src="img/teacher1.png" alt="photo">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="titleColor"><fmt:message key="homeTeacher1"/></h4>
+                    <h7 class="titleColor"><fmt:message key="homeTeacherTitle1"/></h7>
+                    <p class="homePageText"><fmt:message key="homeTeacherText1"/></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 teacherBack">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <img class="img-responsive img-rounded teacherPhoto" src="img/teacher4.png" alt="photo">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="titleColor"><fmt:message key="homeTeacher4"/></h4>
+                    <h7 class="titleColor"><fmt:message key="homeTeacherTitle4"/></h7>
+                    <p class="homePageText"><fmt:message key="homeTeacherText4"/></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Gallery *************************************************************-->
+    <div class="row marginSections">
+        <!--Title Gallery-->
+        <div class="col-md-12 titleMargin">
+            <center>
+                <h4 class="titleColor"><fmt:message key="homeGallery"/></h4>
+                <img class="img-responsive" src='img/titleDecor.png' alt='titleDecorPhoto'>
+            </center>
+        </div>
+
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery1.png" alt="photo" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery2.png" alt="photo" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery3.png" alt="photo" style="width: 100%;">
+            </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 2%;">
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery4.png" alt="photo" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery5.png" alt="photo" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery6.png" alt="photo" style="width: 100%;">
+            </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 2%;">
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery7.png" alt="photo" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery8.png" alt="photo" style="width: 100%;">
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="img/galery9.png" alt="photo" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+
 </div>

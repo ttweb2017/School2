@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.util.List;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,9 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import mail.SendMail;
 import model.Classes;
+import model.Convert;
 import model.MapClasses;
 import model.MapClassesRu;
+import model.StudentArray;
 import records.MyDatas;
+import test.CalculateTest;
 
 /**
  *
@@ -42,8 +46,16 @@ import records.MyDatas;
             "/qua",
             "/other",
             "/com",
-            "/des"})
+            "/des",
+            "/scoreTest",
+            "/scoreTestResult", "/register"})
 public class ControllerServlet extends HttpServlet {
+
+    @Override
+    public void init(ServletConfig servletConfig) throws ServletException {
+
+        super.init(servletConfig);
+    }
 
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -100,7 +112,7 @@ public class ControllerServlet extends HttpServlet {
                 mapRu = new MapClassesRu();
 
                 clt = map.getResultTk();
-                System.err.println("for: "+clt);
+                System.err.println("for: " + clt);
                 cl = mapRu.getResultRu();
                 session.setAttribute("mapClass", clt);
                 session.setAttribute("mapClassRu", cl);
@@ -126,6 +138,7 @@ public class ControllerServlet extends HttpServlet {
                     map = new MapClasses();
                     mapRu = new MapClassesRu();
 
+                    System.out.println("dili: " + session.getAttribute("lang"));
                     if (session.getAttribute("lang").equals("tk")) {
                         map.addClassesTk();
                         //search by date only
@@ -179,44 +192,43 @@ public class ControllerServlet extends HttpServlet {
 
                             cl = mapRu.searchByPrice(price);
                             session.setAttribute("mapClassRu", cl);
-
-                            //search by course name only
-                            if (!name.isEmpty() && level.isEmpty() && prc.isEmpty()) {
-                                cl = mapRu.search(name);
-                                session.setAttribute("mapClassRu", cl);
-                            }
-
-                            //search by course level only
-                            if (!level.isEmpty() && prc.isEmpty() && name.isEmpty()) {
-                                cl = mapRu.searchLevel(level);
-                                session.setAttribute("mapClassRu", cl);
-                            }
-
-                            //search by course level and course name only
-                            if (!level.isEmpty() && prc.isEmpty() && !name.isEmpty()) {
-                                cl = mapRu.search(name, level);
-                                session.setAttribute("mapClassRu", cl);
-                            }
-
-                            //search by course level and start date only
-                            if (!level.isEmpty() && !prc.isEmpty() && name.isEmpty()) {
-                                cl = mapRu.searchByDate(level, price);
-                                session.setAttribute("mapClassRu", cl);
-                            }
-
-                            //search by course name and start date only
-                            if (level.isEmpty() && !prc.isEmpty() && !name.isEmpty()) {
-                                cl = mapRu.searchByDate(name, price);
-                                session.setAttribute("mapClassRu", cl);
-                            }
-
-                            //search by course level, course name and start date
-                            if (!level.isEmpty() && !prc.isEmpty() && !name.isEmpty()) {
-                                cl = mapRu.search(name, level, price);
-                                session.setAttribute("mapClassRu", cl);
-                            }
-
                         }
+                        //search by course name only
+                        if (!name.isEmpty() && level.isEmpty() && prc.isEmpty()) {
+                            cl = mapRu.search(name);
+                            session.setAttribute("mapClassRu", cl);
+                        }
+
+                        //search by course level only
+                        if (!level.isEmpty() && prc.isEmpty() && name.isEmpty()) {
+                            cl = mapRu.searchLevel(level);
+                            session.setAttribute("mapClassRu", cl);
+                        }
+
+                        //search by course level and course name only
+                        if (!level.isEmpty() && prc.isEmpty() && !name.isEmpty()) {
+                            cl = mapRu.search(name, level);
+                            session.setAttribute("mapClassRu", cl);
+                        }
+
+                        //search by course level and start date only
+                        if (!level.isEmpty() && !prc.isEmpty() && name.isEmpty()) {
+                            cl = mapRu.searchByDate(level, price);
+                            session.setAttribute("mapClassRu", cl);
+                        }
+
+                        //search by course name and start date only
+                        if (level.isEmpty() && !prc.isEmpty() && !name.isEmpty()) {
+                            cl = mapRu.searchByDate(name, price);
+                            session.setAttribute("mapClassRu", cl);
+                        }
+
+                        //search by course level, course name and start date
+                        if (!level.isEmpty() && !prc.isEmpty() && !name.isEmpty()) {
+                            cl = mapRu.search(name, level, price);
+                            session.setAttribute("mapClassRu", cl);
+                        }
+
                     }
                 }
 
@@ -227,6 +239,9 @@ public class ControllerServlet extends HttpServlet {
                 break;
             case "/news":
                 userPath = "/news";
+                break;
+            case "/scoreTest":
+                userPath = "/test";
                 break;
             case "/eng":
                 session.setAttribute("counter", ++MyDatas.counter);
@@ -276,6 +291,9 @@ public class ControllerServlet extends HttpServlet {
             case "/contacts":
                 userPath = "/contacts";
                 break;
+            case "/register":
+                userPath = "/registerForm";
+                break;
             default:
                 break;
         }
@@ -310,6 +328,7 @@ public class ControllerServlet extends HttpServlet {
         String userPath = request.getServletPath();
         HttpSession session = request.getSession();
         MapClasses map = (MapClasses) session.getAttribute("allCourses");
+        CalculateTest testing = (CalculateTest) session.getAttribute("test");
 
         // if addToCart action is called
         switch (userPath) {
@@ -332,21 +351,35 @@ public class ControllerServlet extends HttpServlet {
                 // if updateCart action is called
                 break;
             case "/sendMail":
+                StudentArray aray = new StudentArray();
                 SendMail email = new SendMail();
-                String text = "Ady: " +request.getParameter("name") + "\nPhone: " + 
-                        request.getParameter("phone") + "\n" + request.getParameter("text");
-                
-                if(email.send(request.getParameter("email"), text)){
+                Convert pdf = new Convert(aray.getStudent(request));
+                System.err.println("data got");
+                pdf.getPdf();
+                System.err.println("pdf ready");
+                String text = "Ady: " + request.getParameter("name") + "\nPhone: "
+                        + request.getParameter("phone") + "\n" + request.getParameter("text");
+
+                if (email.send(request.getParameter("email"), text)) {
                     // if previous view is index or cannot be determined, send user to welcome page
                     try {
                         request.getRequestDispatcher("/index.jsp").forward(request, response);
+                        //pdf.deletePdf();
                     } catch (IOException | ServletException ex) {
                         ex.printStackTrace();
                     }
                     return;
-                }else{
+                } else {
                     userPath = "/aboutCourse";
                 }
+                break;
+            case "/scoreTestResult":
+                if (testing == null) {
+                    testing = new CalculateTest();
+                    testing.calculate(request);
+                    session.setAttribute("testResult", testing);
+                }
+                userPath = "/test";
                 break;
             default:
                 break;
