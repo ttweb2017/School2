@@ -5,13 +5,14 @@
  */
 package model;
 
-import org.jboss.weld.util.LazyValueHolder.Serializable;
+import java.io.Serializable;
+
 
 /**
  *
  * @author Shagy
  */
-public class Classes extends Serializable{
+public class Classes implements Serializable{
     private int id;
     private String tag;
     private String name;
@@ -79,8 +80,4 @@ public class Classes extends Serializable{
         this.period = period;
     }
 
-    @Override
-    protected Object computeValue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

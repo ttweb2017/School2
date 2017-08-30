@@ -354,14 +354,14 @@ public class ControllerServlet extends HttpServlet {
                 StudentArray aray = new StudentArray();
                 SendMail email = new SendMail();
                 Convert pdf = new Convert(aray.getStudent(request));
-                System.err.println("data got");
                 pdf.getPdf();
-                System.err.println("pdf ready");
-                String text = "Ady: " + request.getParameter("name") + "\nPhone: "
-                        + request.getParameter("phone") + "\n" + request.getParameter("text");
+                String text = "Ady: " + request.getParameter("firstName") + " " + 
+                        request.getParameter("surname")  + " " + request.getParameter("fatherName") + 
+                        "\nEl Telefony: " + request.getParameter("mobilePhone") + 
+                        "\nIş Telefony: " + request.getParameter("homePhone") + 
+                        "\nEmail: " + request.getParameter("email");
 
                 if (email.send(request.getParameter("email"), text)) {
-                    // if previous view is index or cannot be determined, send user to welcome page
                     try {
                         request.getRequestDispatcher("/index.jsp").forward(request, response);
                         //pdf.deletePdf();

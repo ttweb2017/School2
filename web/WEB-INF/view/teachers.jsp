@@ -8,9 +8,9 @@
      users view the same page when switching between Russian and Turkmen. --%>
 <c:set var='view' value='/teachers' scope='session' />
 <!-- Main container -->
-<div class="container marginSections">
+<div class="container topAndBottomMargin">
     <!--First Teacher's row-->
-    <div class="row marginSections teachers">
+    <div class="row teachers">
         <div class="col-md-12 text-center marginTop3">
             <h3 class="titleColor"><fmt:message key="teacherTitle" /></h3>
             <h5 class="titleColor"><fmt:message key="teacherText" /></h5>

@@ -81,7 +81,7 @@
                               <h4 class="titleColor text-center"><fmt:message key="courseBus"/></h4>
                           </div>
                           <div class="col-md-12">
-                              <img src="" alt="photo">
+                              <center><img class="img-responsive img-rounded" src="img/bus.png" alt="photo" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -94,13 +94,13 @@
                                   <li><p class="homePageText"><fmt:message key='bussines4' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines5' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines6' /></p></li>
-                                  <li><p class="homePageText"><fmt:message key='bussines7' /></p></li>
+                                  <!--<li><p class="homePageText"><fmt:message key='bussines7' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines8' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines9' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines10' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines11' /></p></li>
                                   <li><p class="homePageText"><fmt:message key='bussines12' /></p></li>
-                                  <li><p class="homePageText"><fmt:message key='bussines13' /></p></li>
+                                  <li><p class="homePageText"><fmt:message key='bussines13' /></p></li>-->
                               </ul>
                           </div>
                       </div>
@@ -111,7 +111,7 @@
                       <div class="row">
                           <h4 class="titleColor text-center"><fmt:message key='courseComp' /></h4>
                           <div class="col-md-12 marginTop3">
-                              <img class="img-responsive img-rounded" src="img/abtComp.png" alt="photo2" style="width: 95%;">
+                              <center><img class="img-responsive img-rounded" src="img/comp.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3" style="padding-right: 7%;">
@@ -133,7 +133,7 @@
                       <div class="row">
                           <h4 class="titleColor text-center"><fmt:message key='courseDes' /></h4>
                           <div class="col-md-12 marginTop3">
-                              <img class="img-responsive img-rounded" src="img/designPhoto.png" alt="photo3" style="width: 95%;">
+                              <center><img class="img-responsive img-rounded" src="img/des.png" alt="photo3" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3" style="padding-right: 7%;">
@@ -154,7 +154,7 @@
                       <div class="row">
                           <h4 class="titleColor text-center"><fmt:message key='courseChi' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/chi.jpg" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -168,7 +168,7 @@
                       <div class="row">
                           <h4 class="titleColor text-center"><fmt:message key='courseDeu' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/deu.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -182,7 +182,7 @@
                       <div class="row">
                           <h4 class="text-center titleColor"><fmt:message key='courseEng' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo">
+                              <center><img class="img-responsive img-rounded" src="img/eng.png" alt="photo" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -203,7 +203,7 @@
                       <div class="row">
                           <h4 class="titleColor text-center"><fmt:message key='courseTur' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/tur.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -217,7 +217,7 @@
                       <div class="row">
                           <h4 class="text-center titleColor"><fmt:message key='courseJap' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/jap.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -231,7 +231,7 @@
                       <div class="row">
                           <h4 class="text-center titleColor"><fmt:message key='courseRus' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/ru.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -246,7 +246,7 @@
                       <div class="row">
                           <h4 class="text-center titleColor"><fmt:message key='courseOther' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/other.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">
@@ -269,7 +269,7 @@
                       <div class="row">
                           <h4 class="text-center titleColor"><fmt:message key='courseQua' /></h4>
                           <div class="col-md-12">
-                              <img src="" alt="photo2">
+                              <center><img class="img-responsive img-rounded" src="img/qua.png" alt="photo2" style="width: 50%;"></center>
                           </div>
 
                           <div class="col-md-12 marginTop3">

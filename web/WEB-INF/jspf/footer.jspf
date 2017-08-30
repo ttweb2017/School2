@@ -1,11 +1,8 @@
 <%-- footer content specified here: --%>
 <footer>
     <div class="col-md-12" style="background-color: #521900;">
-        <div id="footerImg2" class="col-md-2" style="margin-top: -3%;">
-            <img class="img-responsive" src="img/gerb.png" alt='gerb'>
-        </div>
         
-        <div class="col-md-6" style="margin-top: 2%;">
+        <div class="col-md-offset-2 col-md-6" style="margin-top: 2%;">
             <p class="footerText">
                 <i class="fa fa-2x fa-map-marker"></i> <fmt:message key='footerAdress' />
             </p>
@@ -27,7 +24,8 @@
             <img class="img-responsive" src="img/pero.png" alt='pero'>
         </div>
         <div class="col-md-offset-4 col-md-4 text-center" style="margin-top: 2%;color: #00B5D9;">
-            <p>&copy; <fmt:message key='company' /></p>
+            <a href="http://ttweb.org"><img src="img/TTWEB.png" alt="TTWEBLOGO" style="width:15%;"></a>
+            <p style="color:white;"><fmt:message key='company' /></p>
         </div>
     </div>
 </footer>

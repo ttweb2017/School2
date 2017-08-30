@@ -7,7 +7,10 @@ package mail;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -21,6 +24,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.MimeUtility;
 
 
 
@@ -46,6 +50,8 @@ public class SendMail {
         //from = "shuhratberdiyev@gmail.com";
         // Setup mail server
         properties.setProperty("mail.smtp.host", host);
+        //properties.setProperty(Exchange.CHARSET_NAME, "UTF-8");
+        properties.put("mail.mime.charset", "UTF-8");
 
         // Get the default Session object.
         Session mailSession = Session.getDefaultInstance(properties);
@@ -54,16 +60,21 @@ public class SendMail {
             // Create a default MimeMessage object.
             MimeMessage message = new MimeMessage(mailSession);
 
+            message.setHeader("Content-Type", "text/plain; charset=UTF-8");
+            
             // Set From: header field of the header.
             message.setFrom(new InternetAddress(from));
 
             // Set To: header field of the header.
             message.addRecipient(Message.RecipientType.TO,
                     new InternetAddress(to));
+            
             // Set Subject: header field
-            message.setSubject("Register to Class");
+            message.setSubject(MimeUtility.encodeText("Mekdebe ýazylmak", "UTF-8", "Q"));//MimeUtility.encodeText(subject, "utf-8", "B")
 
             BodyPart messageBodyPart = new MimeBodyPart();
+            
+            messageBodyPart.setContent(message, "text/plain; charset=UTF-8");
             
             messageBodyPart.setText(msg);
             
@@ -89,6 +100,9 @@ public class SendMail {
         } catch (MessagingException mex) {
             mex.printStackTrace();
             result = "Error: unable to send message....";
+            return false;
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(SendMail.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
